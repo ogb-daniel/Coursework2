@@ -1,7 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
 const lessons = [
   {
     topic: " math ",
