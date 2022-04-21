@@ -24,7 +24,11 @@ const lessons = [
     price: 120,
   },
 ];
+const user = [
+  { " email ": " user@email . com ", " password ": " mypassword " },
+];
 
+app.use(cors(corsOptions));
 app.get("/", (req, res) => {
   res.send("Welcome to home page");
 });
