@@ -2,6 +2,33 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+const lessons = [
+  {
+    topic: " math ",
+    location: " London ",
+    price: 100,
+  },
+  {
+    topic: " math ",
+    location: " L i v e r p o o l ",
+    price: 80,
+  },
+  {
+    topic: " math ",
+    location: " Oxford ",
+    price: 90,
+  },
+  {
+    topic: " math ",
+    location: " B r i s t o l ",
+    price: 120,
+  },
+];
+
+app.get("/", (req, res) => {
+  res.send("Welcome to home page");
+});
+
 app.get("/lessons", (req, res) => {
   res.send(lessons);
 });
